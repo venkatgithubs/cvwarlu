@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+label {
+    cursor: default;
+}

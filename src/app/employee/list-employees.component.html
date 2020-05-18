@@ -1,0 +1,47 @@
+
+<div class="panel panel-primary" *ngFor="let Employees of employee">
+<div class="panel-heading"><h4 class="panel-title">{{Employees.ename}}</h4></div>
+<div class="panel-body">
+    
+    <div class="col-xs-10">
+        <div class="row">
+            <div class="col-xs-4">
+                <img style="width: 100px;height: 150;" [src]="Employees.imgPath"/>
+            </div>
+            <div class="col-xs-6">
+                <div class="row">
+                    <div class="col-xs-5">job</div>
+                    <div class="col-xs-5">{{Employees.job}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5">job</div>
+                    <div class="col-xs-5">{{Employees.job}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5">Manager</div>
+                    <div class="col-xs-5">{{Employees.mgr}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5">Hiredate</div>
+                    <div class="col-xs-5">{{Employees.hiredate}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5">Salary</div>
+                    <div class="col-xs-5">{{Employees.sal}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5">Commision</div>
+                    <div class="col-xs-5">{{Employees.comm}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5">Department</div>
+                    <div class="col-xs-5">{{Employees.deptno}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+ 
+
+   </div>

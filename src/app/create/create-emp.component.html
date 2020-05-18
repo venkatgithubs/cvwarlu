@@ -1,0 +1,89 @@
+<form #employeeForm="ngForm" (ngSubmit)="saveEmployee(employeeForm)">
+<div class="panel panel-primary">
+    <div class="panel-heading"><h4 class="panel-title">Add Employee..</h4></div>
+    <div class="panel-body">
+        
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="form-group">
+                        <label for="fullname">Name:</label>
+                        
+                        
+                         <input type="text" id="fullname" name="ename" class="form-control" ngModel="">  
+
+                    </div>
+                   
+                             <div class="form-group">
+                       <label>Department:</label>
+                        <select id="drpdept" class="form-control" name="dname" ngModel="">
+                            <option  *ngFor="let dep of dept" value="{{dep.deptno}}">{{dep.dname}}</option>
+                        </select>
+                        </div>
+                       
+                        <div class="form-group">
+                            <label for="txtJob">Job:</label>
+                            <input type="text" id="txtJob" class="form-control" name="job" ngModel="job">  
+                             </div>
+                             <div class="form-group">
+                                <label for="txtMgr">Manager:</label>
+                                <input type="text" id="txtMgr" class="form-control" name="mgr" ngModel="mgr">  
+
+                    </div>
+                   
+                </div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-4">
+                    <div class="form-group">
+                        <label for="hiredate">HireDate:</label>
+                        <input type="text" id="hiredate" class="form-control" bsDaterangepicker name="hdata"  ngModel={{hdate+1}}> 
+                       
+                         </div>
+               
+                <div class="form-group">
+                    <label for="txtComm">Commision:</label>
+                    <input type="text" id="txtComm" class="form-control" name="comm" ngModel="comm">  
+                     </div>
+                     <div class="form-group">
+                        <label for="txtSal">Salary:</label>
+                        <input type="text" id="txtSal" class="form-control" name="sal" ngModel="sal">  
+                         </div>
+                         <div class="form-group">
+                            <label for="gender">Gender:</label>
+                           <label class="radio-inline">
+                               <input type="radio" name="gender" value="Male" [(ngModel)]="gender">Male
+                           </label>  
+                           <label class="radio-inline">
+                            <input type="radio" name="gender" value="Female" [(ngModel)]="gender">Female
+                        </label>  
+                             </div>
+                             <div class="form-group">
+                                <label for="gender">Location:</label>
+                               <label class="radio-inline">
+                                   <input type="checkbox" name="loc" value="Hyderabad" [(ngModel)]="loc">Hyderabad
+                               </label>  
+                               <label class="radio-inline">
+                                <input type="checkbox" name="loc2" value="Achampet" [(ngModel)]="loc2">Achampet
+                            </label>  
+                                 </div>
+            </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6"></div>
+                    <div class="col-xs-2">
+                        <input type="button" value="Submit" class="form-control btn btn-primary">
+                    </div>
+                    <div class="col-xs-2">
+                        <input type="submit" value="Cancel" class="form-control btn btn-danger">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Panel-footer">
+           
+        </div>
+    </div>
+</form>
+     
+    {{employeeForm.value | json}}
+       
